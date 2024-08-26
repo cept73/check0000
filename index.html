@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Проверка 0.0.0.0 уязвимости</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="css/fonts.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<section id="main">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="wrapper">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <div class="contact-wrap w-100 p-lg-4 p-lg-x-1 p-3">
+                            <div id="form-message-warning" class="mb-4"></div>
+
+                            <div class="mb-3 mt-3">
+                                <label for="port" class="form-label h4">Метод:</label>
+                                <select class="form-select form-select-lg" id="method">
+                                    <option value="GET">GET</option>
+                                    <option value="POST">POST</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3 mt-3">
+                                <label for="port" class="form-label h4">Протокол:</label>
+                                <label for="protocol"></label><select class="form-select form-select-lg" id="protocol">
+                                    <option value="http://">HTTP://</option>
+                                    <option value="https://">HTTPS://</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-5 mt-3">
+                                <label for="port" class="form-label h4">Порт:</label>
+                                <input type="number" class="form-control" id="port" placeholder="Например: 80, 443, 631" value="80">
+                            </div>
+
+                            <button type="submit" class="btn btn-danger btn-lg send-button">Отправить</button>
+                        </div>
+                    </div>
+                    <div class="col-md-8 d-flex align-items-stretch">
+                        <div class="info-wrap w-100 p-lg-5 p-4 img">
+                            <h2>Ответ сервера:</h2>
+                            <textarea class="form-control fs-4" rows="10" id="response" disabled></textarea>
+                            <p>Статус: <span id="response-code">&ndash;</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
